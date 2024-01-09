@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $cities = \App\Models\City::count();
+    $states = \App\Models\State::count();
+    $branches = \App\Models\Branch::count();
+    return view('home', compact('cities', 'states', 'branches'));
 })->name('home');
 
 Route::get('/branches', function () {
@@ -25,3 +28,5 @@ Route::get('/branches', function () {
 Route::get('/branches/{branch}', function (\App\Models\Branch $branch) {
     return view('branch', compact('branch'));
 })->name('branch');
+
+Route::post('contact', [\App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');

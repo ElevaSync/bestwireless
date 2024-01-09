@@ -144,38 +144,36 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                     <div class="fun-facts-card fun-facts-card-2">
                         <i class="flaticon-smart-city"></i>
-                        <h2><span class="odometer" data-count="46712">00</span></h2>
-                        <p>People In The City</p>
+                        <h2><span class="odometer" data-count="{{ $cities }}">00</span></h2>
+                        <p>Cities Of Our Branches</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                     <div class="fun-facts-card fun-facts-card-2">
                         <i class="flaticon-location-1"></i>
                         <h2>
-                            <span class="odometer" data-count="22">00</span>
-                            <span class="sign-icon">K</span>
+                            <span class="odometer" data-count="{{ $states }}">00</span>
                         </h2>
-                        <p>Square Of City</p>
+                        <p>States Of Our Branches</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                     <div class="fun-facts-card fun-facts-card-2">
                         <i class="flaticon-park-1"></i>
                         <h2>
-                            <span class="odometer" data-count="300">00</span>
-                            <span class="sign-icon">+</span>
+                            <span class="odometer" data-count="{{ $branches }}">00</span>
                         </h2>
-                        <p>Year Of Foundation</p>
+                        <p>Branches</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                     <div class="fun-facts-card last-card fun-facts-card-2">
                         <i class="flaticon-award"></i>
                         <h2>
-                            <span class="odometer" data-count="1000">00</span>
+                            <span class="odometer" data-count="5890">00</span>
                             <span class="sign-icon">+</span>
                         </h2>
-                        <p>Successful Programs</p>
+                        <p>Customers</p>
                     </div>
                 </div>
             </div>
