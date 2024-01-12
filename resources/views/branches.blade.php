@@ -6,10 +6,19 @@
     <section class="uni-banner">
         <div class="container">
             <div class="uni-banner-text-area">
-                <h1>Our Branches</h1>
+                <h1>Our Branches
+                    @if(Route::currentRouteName() == 'branches.state')
+                        in {{ $state->name }}
+                    @endif
+                </h1>
                 <ul>
                     <li><a href="{{ route('home') }}">Home</a></li>
-                    <li>Branches</li>
+                    @if(Route::currentRouteName() == 'branches.state')
+                        <li><a href="{{ route('branches') }}">Branches</a></li>
+                        <li>{{ $state->name }}</li>
+                    @else
+                        <li>Branches</li>
+                    @endif
                 </ul>
             </div>
         </div>

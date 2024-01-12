@@ -43,7 +43,15 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a href="{{ route('home') }}" class="nav-link @if(Route::currentRouteName() == 'home') active @endif">Home</a></li>
-                        <li class="nav-item"><a href="{{ route('branches') }}" class="nav-link @if(Route::currentRouteName() == 'branches') active @endif">Branches</a></li>
+                        <li class="nav-item"><a href="{{ route('branches') }}" class="nav-link @if(Route::currentRouteName() == 'branches') active @endif">All Branches</a></li>
+                        <li class="nav-item"><a href="{{ route('branches.state', 'NC') }}" class="nav-link @if(Route::currentRouteName() == 'branches.state' && Route::current()->parameter('state') == 'NC') active @endif">North Carolina</a></li>
+                        <li class="nav-item"><a href="{{ route('branches.state', 'VA') }}" class="nav-link @if(Route::currentRouteName() == 'branches.state' && Route::current()->parameter('state') == 'VA') active @endif">Virginia</a></li>
+                        @if(Route::currentRouteName() == 'home')
+                            <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+                        @else
+                            <li class="nav-item"><a href="{{ route('home') }}#contact"  class="nav-link">Contact Us</a></li>
+                        @endif
+
                     </ul>
                 </div>
             </nav>

@@ -20,6 +20,14 @@ Route::get('/', function () {
     return view('home', compact('cities', 'states', 'branches'));
 })->name('home');
 
+Route::get('/branches/state/{state}', function ($short_name) {
+    $branches = \App\Models\Branch::with('city.state')->whereHas('city.state', function ($query) use ($short_name) {
+        $query->where('short_name', $short_name);
+    })->get();
+    $state = \App\Models\State::where('short_name', $short_name)->first();
+    return view('branches', compact('branches', 'state'));
+})->name('branches.state');
+
 Route::get('/branches', function () {
     $branches = \App\Models\Branch::with('city.state')->get();
     return view('branches', compact('branches'));
