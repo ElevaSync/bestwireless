@@ -31,7 +31,7 @@
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="service-card">
                         <div class="service-card-img">
-                            <a href="{{ route('branch', $branch->id) }}"><img src="{{ asset('storage/'. $branch->image) }}" alt="image"></a>
+                            <a href="{{ route('branch', $branch->id) }}"><img data-src="{{ asset('storage/'. $branch->image) }}" class="lazyload" alt="{{ $branch->name }}"></a>
                         </div>
                         <div class="service-card-text">
                             <h4><a href="{{ route('branch', $branch->id) }}">{{ $branch->name }}</a></h4>
@@ -50,4 +50,16 @@
             </div>
         </div>
     </section>
+@endsection
+
+@section('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/lozad@1.14.0/dist/lozad.min.js"></script>
+    <script>
+    const observer = lozad('.lazyload', {
+        loaded: function(el) {
+        el.classList.add('loaded'); // Optional: Add a class when the image is loaded
+        }
+    });
+    observer.observe();
+    </script>
 @endsection
