@@ -25,8 +25,7 @@ class BranchResource extends Resource
             ->schema([
                 Forms\Components\Section::make([
                     Forms\Components\FileUpload::make('image')
-                        ->image()
-                        ->required(),
+                        ->image(),
                     Forms\Components\Select::make('city_id')
                         ->relationship('city', 'name')
                         ->searchable()
@@ -36,11 +35,9 @@ class BranchResource extends Resource
                         ->maxLength(255),
                     Forms\Components\TextInput::make('code_phone')
                         ->tel()
-                        ->required()
                         ->maxLength(3),
                     Forms\Components\TextInput::make('phone')
                         ->tel()
-                        ->required()
                         ->maxLength(255),
                     Forms\Components\TextInput::make('street')
                         ->required()

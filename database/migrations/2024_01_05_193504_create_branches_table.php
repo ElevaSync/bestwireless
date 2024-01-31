@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('branches', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('code_phone', 3);
-            $table->string('phone');
+            $table->string('code_phone', 3)->nullable();
+            $table->string('phone')->nullable();
             $table->string('street');
             $table->string('zip_code', 5);
             $table->time('open_workday')->default('10:00:00');

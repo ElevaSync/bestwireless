@@ -37,4 +37,8 @@ Route::get('/branches/{branch}', function (\App\Models\Branch $branch) {
     return view('branch', compact('branch'));
 })->name('branch');
 
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
 Route::post('contact', [\App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
