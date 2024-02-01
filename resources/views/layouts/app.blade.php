@@ -28,8 +28,7 @@
                 <a href="{{ route('home') }}" class="logo">
                     <img src="{{ asset('assets/images/logo.png') }}" alt="logo" style="height: 50px" />
                 </a>
-                <ul class="menu-sidebar menu-small-device">
-                </ul>
+
             </div>
         </div>
     </div>

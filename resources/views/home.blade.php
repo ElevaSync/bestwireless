@@ -66,9 +66,6 @@
 
     <section class="contact-form-area pb-100" id="contact">
         <div class="container">
-            <div class="default-section-title default-section-title-middle mb-5">
-                <h3>Get In Touch</h3>
-            </div>
             <div class="section-content">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
