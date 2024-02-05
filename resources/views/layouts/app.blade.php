@@ -28,7 +28,6 @@
                 <a href="{{ route('home') }}" class="logo">
                     <img src="{{ asset('assets/images/logo.png') }}" alt="logo" style="height: 50px" />
                 </a>
-
             </div>
         </div>
     </div>
@@ -50,7 +49,6 @@
                         @else
                             <li class="nav-item"><a href="{{ route('home') }}#contact"  class="nav-link">Contact Us</a></li>
                         @endif
-
                     </ul>
                 </div>
             </nav>

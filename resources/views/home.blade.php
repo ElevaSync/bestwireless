@@ -28,7 +28,7 @@
         <div class="container">
             <div class="section-content">
                 <div class="service-slider-area-1 owl-carousel">
-                    @for($i = 1; $i <= 4; $i++)
+                    @for($i = 1; $i <= 5; $i++)
                     <div class="service-card mlr-15 mb-30">
                         <div class="service-card-img">
                             <img src="{{ asset('assets/images/slider/' . $i .'.jpg') }}" alt="image">
